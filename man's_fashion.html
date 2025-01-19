@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Fashion - YourStyle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #fff9c4, #ffecb3); /* Mixture of yellow and white */
+            margin: 0;
+            padding: 0;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #b39ddb, #cacd75); /* Soft purple theme */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+        }
+    
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+    
+
+        header {
+            background-color: #004d7a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+            
+        .search-bar {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+        }
+    
+        .search-bar input {
+            width: 350px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+            font-size: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+    
+        .search-bar input:focus {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    
+        .search-bar button {
+            padding: 12px 24px;
+            background-color: #fbc02d; /* Matching yellow */
+            border: none;
+            color: white;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+    
+        .search-bar button:hover {
+            background-color: #ffeb3b;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(229, 241, 160);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .category {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 40px;
+        }
+    
+
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+
+        .product-item {
+            width: calc(33% - 20px);
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .product-item img {
+            width:80%;
+            height: auto;
+        }
+
+        .product-item-details {
+            padding: 15px;
+        }
+
+        .product-item-details h3 {
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .product-item-details p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+      
+        .product-item-details .stars {
+            color: #ffcc00;
+            margin-top: 10px;
+        }
+
+        .star{
+            font-size: 1.2rem;
+            margin-right: 5px;
+        }
+
+       
+        .stars i {
+            color: #ffcc00;
+            margin-right: 5px;
+        } 
+        .buy-btn {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #004d7a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .buy-btn:hover {
+            background-color: #003f5b;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Men's Fashion - YourStyle</h1>
+    </header>
+    <div class="search-bar">
+        <input type="text" placeholder="Search for products...">
+        <button>Search</button>
+    </div>
+
+    <div class="container">
+        <div class="product">
+            <!-- Product Item 1 -->
+            <div class="product-item">
+                <img src="D:\Jaipur\jp\men's fashion.jpg" alt="Product Image">
+                <div class="product-item-details">
+                    <h3>Men's Stylish T-shirt</h3>
+                    <p>Price: $29.99</p>
+                    <p>A classic men's T-shirt made from 100% cotton.</p>
+                    <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                    <div>                   
+                         <a href="mens'_checkout.html" class="buy-btn">Buy Now</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Item 2 -->
+            <div class="product-item">
+                <img src="D:\Jaipur\jp\men's snkear.jpg" alt="Product Image">
+                <div class="product-item-details">
+                    <h3>Men's Casual Sneakers</h3>
+                    <p>Price: $49.99</p>
+                    <p>Stylish sneakers for men, perfect for everyday wear with a modern touch.</p>
+                    <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                        <div>                   
+                            <a href="#" class="buy-btn">Buy Now</a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Item 3 -->
+            <div class="product-item">
+                <img src="D:\Jaipur\jp\men's wallet.jpg" alt="Product Image">
+                <div class="product-item-details">
+                    <h3>Men's Leather Wallet</h3>
+                    <p>Price: $35.99</p>
+                    <p>A sleek and durable wallet made from genuine leather, ideal for daily use.</p>
+                    <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                        <div>                   
+                            <a href="#" class="buy-btn">Buy Now</a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Item 4 -->
+            <div class="product-item">
+                <img src="D:\Jaipur\jp\men's watch.jpg" alt="Product Image">
+                <div class="product-item-details">
+                    <h3>Men's Stylish Watch</h3>
+                    <p>Price: $199.99</p>
+                    <p>Elegant watch featuring a minimalist design and premium finish.</p>
+                    <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                        <div>                   
+                            <a href="#" class="buy-btn">Buy Now</a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Item 5 -->
+            <div class="product-item">
+                <img src="D:\Jaipur\jp\men'strouser.jpg" alt="Product Image">
+                <div class="product-item-details">
+                    <h3>Men's Casual Trousers</h3>
+                    <p>Price: $39.99</p>
+                    <p>Comfortable and stylish trousers, perfect for casual outings and office wear.</p>
+                    <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                        <div>                   
+                            <a href="#" class="buy-btn">Buy Now</a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Item 6 -->
+            <div class="product-item">
+                <img src="D:\Jaipur\jp\men's glasses.jpg" alt="Product Image">
+                <div class="product-item-details">
+                    <h3>Men's Sunglasses</h3>
+                    <p>Price: $59.99</p>
+                    <p>Stylish sunglasses that offer UV protection and a trendy look.</p>
+                    <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                        <div>                   
+                            <a href="#" class="buy-btn">Buy Now</a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Item 7 -->
+            <div class="product-item">
+                <img src="D:\Jaipur\jp\men'sjacket.jpg" alt="Product Image">
+                <div class="product-item-details">
+                    <h3>Men's Jacket</h3>
+                    <p>Price: $89.99</p>
+                    <p>Warm and stylish jacket, ideal for chilly weather and casual outings.</p>
+                    <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                        <div>                   
+                            <a href="#" class="buy-btn">Buy Now</a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Item 8 -->
+            <div class="product-item">
+                <img src="D:\Jaipur\jp\men's belt.jpg" alt="Product Image">
+                <div class="product-item-details">
+                    <h3>Men's Belt</h3>
+                    <p>Price: $24.99</p>
+                    <p>Classic leather belt, perfect for formal and casual attire.</p>
+                    <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                        <div>                   
+                            <a href="#" class="buy-btn">Buy Now</a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Item 9 -->
+            <div class="product-item">
+                <img src="D:\Jaipur\jp\men's casual short.jpg" alt="Product Image">
+                <div class="product-item-details">
+                    <h3>Men's Casual Shirt</h3>
+                    <p>Price: $34.99</p>
+                    <p>Stylish and breathable shirt, perfect for casual outings and office wear.</p>
+                    <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                        <div>                   
+                            <a href="#" class="buy-btn">Buy Now</a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Item 10 -->
+            <div class="product-item">
+                <img src="D:\Jaipur\jp\mes'sparty.jpg" alt="Product Image">
+                <div class="product-item-details">
+                    <h3>Men's party Wear</h3>
+                    <p>Price: $69.99</p>
+                    <p>Comfortable shoes perfect for daily wear, featuring a sleek and modern design.</p>
+                    <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                        <div>                   
+                            <a href="#" class="buy-btn">Buy Now</a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="contact" class="container">
+        <h2>Contact Us</h2>
+        <p>Have questions? Reach out to us anytime at contact@yourstyle.com or call us at (123) 456-7890.</p>
+    </div>
+    <footer>
+        <p>&copy; 2025 YourStyle. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous">
+            function filterProducts() {
+        const searchInput = document.getElementById('searchBar').value.toLowerCase();
+        const productCards = document.querySelectorAll('.product-card');
+
+        productCards.forEach((card) => {
+            const productName = card.getAttribute('h3').toLowerCase();
+            if (productName.includes(searchInput)) {
+                card.style.display = 'block'; // Show matching cards
+            } else {
+                card.style.display = 'none'; // Hide non-matching cards
+            }
+        });
+    }
+    </script>
+</body>
+</html>

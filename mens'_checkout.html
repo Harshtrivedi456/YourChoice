@@ -1,0 +1,226 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Checkout - YourStyle</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: linear-gradient(to bottom, #fff9c4, #ffecb3);
+                margin: 0;
+                padding: 0;
+            }
+
+            header {
+                background-color: #004d7a;
+                color: white;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: row;
+                max-width: 1200px;
+                margin: 20px auto;
+                padding: 20px;
+                background: linear-gradient(135deg, #e9f0f8, #f9f9f9);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                gap: 20px;
+            }
+
+            .product-section {
+                flex: 1;
+                text-align: center;
+            }
+
+            .product-section img {
+                width: 250px;
+                height: auto;
+                margin-bottom: 10px;
+            }
+
+            .product-section h3 {
+                font-size: 1.5rem;
+                margin: 0;
+            }
+
+            .product-section .price {
+                font-weight: bold;
+                color: #004d7a;
+                margin: 10px 0;
+            }
+
+            .shipping-section {
+                flex: 1;
+                background-color: #ffffff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .shipping-section h2 {
+                margin-bottom: 15px;
+            }
+
+            .form-group {
+                margin-bottom: 15px;
+            }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+
+            .buy-btn {
+                display: block;
+                text-align: center;
+                margin-top: 20px;
+                padding: 10px;
+                background-color: #004d7a;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+            }
+
+            .buy-btn:hover {
+                background-color: #003f5b;
+            }
+
+            .explore-section {
+                max-width: 1200px;
+                margin: 20px auto;
+                padding: 20px;
+                background: linear-gradient(135deg, #e9f0f8, #f9f9f9);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .explore-section h2 {
+                margin-bottom: 15px;
+            }
+
+            .similar-products {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .similar-product {
+                flex: 1 1 calc(25% - 15px);
+                text-align: center;
+                background: white;
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .similar-product img {
+                width: 150px;
+                height: auto;
+            }
+
+            .similar-product h3 {
+                font-size: 1rem;
+                margin: 10px 0;
+            }
+
+            .similar-product .price {
+                font-weight: bold;
+                color: #004d7a;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Checkout - YourStyle</h1>
+        </header>
+
+        <div class="container">
+            <!-- Product Section -->
+            <div class="product-section">
+                <img src="D:\Jaipur\jp\men's fashion.jpg" alt="Product Image">
+                <h3>Men's Stylish T-shirt</h3>
+                <p class="price">$29.99</p>
+            </div>
+
+            <!-- Shipping Section -->
+            <div class="shipping-section">
+                <h2>Shipping Details</h2>
+                <form id="checkout-form">
+                    <!-- User Details -->
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="tel" id="mobile" name="mobile" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <textarea id="address" name="address" required></textarea>
+                    </div>
+
+                    <!-- Additional Section -->
+                    <h3>Additional Details</h3>
+                    <div class="form-group">
+                        <label for="scheme">Applied Scheme (if any)</label>
+                        <input type="text" id="scheme" name="scheme" placeholder="E.g., Festive Offer">
+                    </div>
+                    <div class="form-group">
+                        <label for="discount">Discount Code</label>
+                        <input type="text" id="discount" name="discount" placeholder="Enter discount code">
+                    </div>
+                    <div class="form-group">
+                        <label for="points">Reward Points</label>
+                        <input type="number" id="points" name="points" placeholder="E.g., 100">
+                    </div>
+
+                    <button type="submit" class="buy-btn">Place Order</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Explore More Section -->
+        <div class="explore-section">
+            <h2>Explore More</h2>
+            <div class="similar-products">
+                <div class="similar-product">
+                    <img src="https://via.placeholder.com/150" alt="Product">
+                    <h3>Casual Shirt</h3>
+                    <p class="price">$24.99</p>
+                </div>
+                <div class="similar-product">
+                    <img src="https://via.placeholder.com/150" alt="Product">
+                    <h3>Denim Jeans</h3>
+                    <p class="price">$39.99</p>
+                </div>
+                <div class="similar-product">
+                    <img src="https://via.placeholder.com/150" alt="Product">
+                    <h3>Leather Jacket</h3>
+                    <p class="price">$89.99</p>
+                </div>
+                <div class="similar-product">
+                    <img src="https://via.placeholder.com/150" alt="Product">
+                    <h3>Sports Shoes</h3>
+                    <p class="price">$49.99</p>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>

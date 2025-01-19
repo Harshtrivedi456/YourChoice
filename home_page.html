@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourStyle - E-Commerce</title>
+    <style>
+        body {
+            font-family: 'Cookie', cursive;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #fff9c4, #ffecb3); /* Mixture of yellow and white */
+            color: #333;
+            scroll-behavior: smooth;
+        }
+    
+        footer {
+            background: linear-gradient(135deg, #b39ddb, #cacd75); /* Soft purple theme */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+        }
+    
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+    
+        header {
+            background: linear-gradient(135deg, #ebe049, #fbc02d); /* Yellow gradient for header */
+            color: rgb(235, 237, 222);
+            padding: 1rem 2rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s;
+        }
+    
+        header:hover {
+            background: linear-gradient(135deg, #fbc02d, #ffeb3b); /* Slightly darker hover effect */
+        }
+    
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+    
+        header nav {
+            margin-top: 10px;
+        }
+    
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            transition: color 0.3s, transform 0.3s;
+        }
+    
+        header nav a:hover {
+            color: #ffd700;
+            transform: scale(1.1);
+        }
+    
+        .search-bar {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+        }
+    
+        .search-bar input {
+            width: 350px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+            font-size: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+    
+        .search-bar input:focus {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    
+        .search-bar button {
+            padding: 12px 24px;
+            background-color: #fbc02d; /* Matching yellow */
+            border: none;
+            color: white;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+    
+        .search-bar button:hover {
+            background-color: #ffeb3b;
+            transform: translateY(-2px);
+        }
+    
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 350px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+    
+        .carousel img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+    
+        .carousel .prev, .carousel .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            z-index: 10;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+    
+        .carousel .prev {
+            left: 10px;
+        }
+    
+        .carousel .next {
+            right: 10px;
+        }
+    
+        .carousel .prev:hover, .carousel .next:hover {
+            background-color: #333;
+        }
+    
+        .container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    
+        .category {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 40px;
+        }
+    
+        .category-card {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: #e3e6d4;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 40px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+    
+        .category-card:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+    
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+    
+        .category-card img {
+            max-width: 30%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+    
+        .category-card:hover img {
+            transform: scale(1.2);
+        }
+    
+        .category-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.8rem;
+            color: #0c1404; /* Yellow for the category header */
+            text-transform: uppercase;
+        }
+    
+        .category-card p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+    
+        .buy-now {
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #fbc02d; /* Matching yellow */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+    
+        .buy-now:hover {
+            background-color: #ffeb3b;
+            transform: scale(1.1);
+        }
+    
+        .product-listing {
+            padding: 40px 20px;
+        }
+    
+        .product-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    
+        .filter-sort {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+    
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+    
+        .product-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+    
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+    
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+    
+        .product-card:hover img {
+            transform: scale(1.1);
+        }
+    
+        .product-card h3 {
+            margin: 15px 0;
+            font-size: 1.3rem;
+            color: #ffeb3b; /* Yellow for product title */
+        }
+    
+        .product-card p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+    
+        .product-card .buy-now {
+            padding: 10px 20px;
+            background-color: #fbc02d; /* Matching yellow */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+    
+        .product-card .buy-now:hover {
+            background-color: #ffeb3b;
+            transform: scale(1.1);
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>YourStyle</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Search for products...">
+        <button>Search</button>
+    </div>
+
+    <!-- Carousel Section -->
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="D:\Jaipur\jp\luxury-clothing-shop-for-men.jpg" alt="Men's Fashion">
+            <img src="D:\Jaipur\jp\tailoring-2575930_640.jpg" alt="Women's Fashion">
+            <img src="D:\Jaipur\jp\hanger-2566555_640.jpg" alt="Accessories">
+            <img src="D:\Jaipur\jp\dresses-53319_640.jpg" alt="Accessories">
+            <img src="D:\Jaipur\jp\cool-fashion-casual-men-outfit-wooden-table_93675-35157.jpg" alt="Accessories">
+            <img src="D:\Jaipur\jp\business-suit-store.jpg" alt="Accessories">
+            <img src="D:\Jaipur\jp\close-up-of-mens-shirts.jpg" alt="Accessories">
+            <img src="D:\Jaipur\jp\stylish-mens-clothing-and-shoes-in-a-clothing-store.jpg" alt="Accessories">
+            <img src="D:\Jaipur\jp\racks-of-clothes-in-a-menswear-store.jpg" alt="Accessories">
+            <img src="D:\Jaipur\jp\female-autumn-clothes-on-hangers-in-white-room.jpg" alt="Accessories">
+            <img src="D:\Jaipur\jp\boutique-shoes-in-a-store.jpg" alt="Accessories">
+
+
+
+
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+
+    <div class="container">
+        <h2>Welcome to YourStyle</h2>
+        <p>Discover the perfect outfit tailored just for you. Explore our categories below to find your style.</p>
+
+        <div id="categories" class="category">
+            <div class="category-card">
+                <img src="D:\Jaipur\jp\men's fashion1.jpg" alt="Men's Fashion">
+                <div>
+                    <h3>Men's Fashion</h3>
+                    <p>Stylish and comfortable apparel for every occasion. Dive into our exclusive collection designed for modern men.</p>
+                    <a href="man's_fashion.html">
+                        <button class="buy-now" onclick="showProductListing('Men')">Shop Now</button>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="D:\Jaipur\jp\woman's fashion.jpg" alt="Women's Fashion">
+                <div>
+                    <h3>Women's Fashion</h3>
+                    <p>Trendy and elegant outfits for all styles. Explore our latest collection to redefine your wardrobe.</p>
+                    <a href="dem1.html">
+                        <button class="buy-now" onclick="showProductListing('Men')">Shop Now</button>
+                    </a>   
+                </div>             
+            </div>
+            <div class="category-card">
+                <img src="D:\Jaipur\jp\little-girl-wearing-bib-overalls.jpg" alt="Kids' Fashion">
+                <div>
+                    <h3>Kids' Fashion</h3>
+                    <p>Adorable and playful clothing for the little ones. Discover vibrant outfits for your children.</p>
+                    <a href="dem1.html">
+                        <button class="buy-now" onclick="showProductListing('Men')">Shop Now</button>
+                    </a>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="D:\Jaipur\jp\shelves-filled-with-womens-accessories.jpg" alt="Accessories">
+                <div>
+                    <h3>Accessories</h3>
+                    <p>Complete your outfit with stylish accessories. Explore our range of bags, watches, and more.</p>
+                    <a href="dem1.html">
+                        <button class="buy-now" onclick="showProductListing('Men')">Shop Now</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="product-listing" class="product-listing">
+            <div class="product-header">
+                <h2>Category: <span id="product-category-name">Products</span></h2>
+            </div>
+            <div class="product-grid" id="product-grid">
+                <!-- Product cards will be dynamically injected here using JavaScript -->
+            </div>
+        </div>
+
+        <div id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <p>Have questions? Reach out to us anytime at contact@yourstyle.com or call us at (123) 456-7890.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 YourStyle. All Rights Reserved.</p>
+    </footer>
+    </div>
+
+    <script>
+        const carouselImages = document.querySelector('.carousel-images');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+        let currentIndex = 0;
+
+        const showProductListing = (category) => {
+            document.getElementById('product-category-name').textContent = category;
+            document.getElementById('product-listing').style.display = 'block';
+            loadProducts(category);
+        };
+
+        const loadProducts = (category) => {
+    const products = {
+        Men: [
+            { name: "Men's Shirt", price: "$25", img: "https://via.placeholder.com/300x200?text=Men's+Shirt" },
+            { name: "Jeans", price: "$45", img: "https://via.placeholder.com/300x200?text=Jeans" },
+            { name: "Sneakers", price: "$75", img: "https://via.placeholder.com/300x200?text=Sneakers" }
+        ],
+        Women: [
+            { name: "Dress", price: "$50", img: "https://via.placeholder.com/300x200?text=Dress" },
+            { name: "Heels", price: "$65", img: "https://via.placeholder.com/300x200?text=Heels" },
+            { name: "Handbag", price: "$30", img: "https://via.placeholder.com/300x200?text=Handbag" }
+        ],
+        Kids: [
+            { name: "T-Shirt", price: "$15", img: "https://via.placeholder.com/300x200?text=T-Shirt" },
+            { name: "Shorts", price: "$20", img: "https://via.placeholder.com/300x200?text=Shorts" },
+            { name: "Sneakers", price: "$25", img: "https://via.placeholder.com/300x200?text=Sneakers" }
+        ],
+        Accessories: [
+            { name: "Watches", price: "$50", img: "https://via.placeholder.com/300x200?text=Watches" },
+            { name: "Bags", price: "$40", img: "https://via.placeholder.com/300x200?text=Bags" },
+            { name: "Sunglasses", price: "$30", img: "https://via.placeholder.com/300x200?text=Sunglasses" }
+        ]
+    };
+
+    const productGrid = document.getElementById('product-grid');
+    productGrid.innerHTML = '';
+
+    products[category].forEach(product => {
+        const productCard = `
+            <div class="product-card">
+                <img src="${product.img}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p>${product.price}</p>
+                <a href="category.html?category=${category}" class="buy-now">View More</a>
+            </div>
+        `;
+        productGrid.innerHTML += productCard;
+    });
+};
+
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? 2 : currentIndex - 1;
+            carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex === 2) ? 0 : currentIndex + 1;
+            carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
+        });
+    </script>
+</body>
+</html>
